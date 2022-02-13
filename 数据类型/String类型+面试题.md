@@ -42,6 +42,17 @@ String s2 = new String("hspedu");
 System.out.println(s1 == s2); // False 都指向不同的堆
 ```
 
+```java
+// 1.以下语句创建了几个对象？
+String s1 = "hello";
+s1 = "haha";
+// 2个对象，s1->hello常量池，然后会去常量池找有没有haha，没有就创建再指向
+
+// 2.以下语句创建了几个对象？
+String a = "hello" + "haha";
+// 1个对象，编译器底层会优化成 "hellohaha"
+```
+
 
 
 # String转基本类型
