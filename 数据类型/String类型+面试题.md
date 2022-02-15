@@ -53,7 +53,23 @@ String a = "hello" + "haha";
 // 1个对象，编译器底层会优化成 "hellohaha"
 ```
 
+```java
+//以下语句创建了几个对象？
+String a = "hello";
+String b = "abc";
+String c = a + b;
+// 3个对象
+//两个变量相加其实这里的底层是 StringBuilder sb = new StringBuilder();
+//sb.append(a);sb.append(b);
+//sb在堆中，并且append是在原来的字符串基础上追加的
+```
 
+![面试题](../图片/String/stringJVM02.png)
+
+# 重要规则
+
+* 常量相加，看的是池
+* 变量相加，看的是堆
 
 # String转基本类型
 
