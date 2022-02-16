@@ -30,6 +30,7 @@
 * 当不希望类的某个属性值被修改，可以用final修饰
 
   ```java
+  // 如果是引用类型，则保护地址不被重新指向
   public class Final01 {
       public static void main(String[] args) {
   //        new A().MAX_VALUE = 100;
